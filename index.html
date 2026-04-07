@@ -1,13 +1,143 @@
-<p style="line-height: 1.6;">*Stella Harden*
-</p>
-<p style="line-height: 1;">Geography PhD Candidate at Simon Fraser University
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links | Stella Harden</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<p style="line-height: 1.6;">My research focuses on mixed methods Geographic Information Science for crowdsourced data.
-</p>
----
-</div>
-<div class="line to-select visible"> 
-  <a href="publications.html"> Publications </a> 
-  <span class="description">(April 2026)</span> 
-</div>
+    /* ── Page ── */
+    body {
+      background-color: #0e0e0e;
+      color: #d4d4d4;
+      font-family: "Courier New", Courier, monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 3rem 2rem;
+    }
+
+    /* ── Terminal container ── */
+    .terminal {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* ── Prompt line (guest@yoursite:projects) ── */
+    .prompt {
+      font-size: 0.9rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .prompt-user  { color: #d4d4d4; }
+    .prompt-at    { color: #6b6b6b; }
+    .prompt-host  { color: #3ddc97; } /* green — change to any colour you like */
+    .prompt-path  { color: #d4d4d4; }
+
+    /* ── Project list ── */
+    .project-list {
+      list-style: none;
+    }
+
+    .project-item {
+      padding: 0.55rem 0;
+      border-bottom: 1px solid #1e1e1e;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .project-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Project name — clickable link */
+    .project-link {
+      font-size: 0.9rem;
+      color: #3ddc97;      /* same green as the host in the prompt */
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.15s;
+    }
+
+    .project-link:hover {
+      opacity: 0.75;
+      text-decoration: underline;
+    }
+
+    /* One-line description */
+    .project-desc {
+      font-size: 0.82rem;
+      color: #6b6b6b;
+    }
+
+    /* ── Blinking cursor at the bottom ── */
+    .cursor-line {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #6b6b6b;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 9px;
+      height: 1.1em;
+      background: #d4d4d4;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal">
+
+    <!-- Prompt — edit the three parts below -->
+    <div class="prompt">
+      <span class="prompt-user">guest</span><!--
+      --><span class="prompt-at">@</span><!--
+      --><span class="prompt-host">stellaharden.github.io</span><!--
+      --><span class="prompt-path">:links</span>
+    </div>
+
+    <!-- Project list — duplicate <li> blocks to add more projects -->
+    <ul class="project-list">
+
+      <li class="project-item">
+        <a class="project-link" href="https://publications.html">Publications</a>
+        <span class="project-desc">Updated April 2026.</span>
+      </li>
+
+      <li class="project-item">
+        <a class="project-link" href="https://cv.html">Curriculum Vitae</a>
+        <span class="project-desc">Updated April 2026.</span>
+      </li>
+
+      <li class="project-item">
+        <a class="project-link" href="https://contact.html">Contact</a>
+        <span class="project-desc">Find me on these platforms.</span>
+      </li>
+
+    </ul>
+
+    <!-- Blinking cursor -->
+    <div class="cursor-line">
+      <span class="cursor"></span>
+    </div>
+
+  </div>
+
+</body>
+</html>
